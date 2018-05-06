@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/nielsVoogt/cf-static#readme",
   "devDependencies": {
+    "breakpoint-sass": "^2.7.1",
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",

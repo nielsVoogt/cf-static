@@ -13,10 +13,6 @@ function onError(err) {
     this.emit('end');
 }
 
-var folders = [
-    './styling',
-];
-
 // --------------------------------------------------- SASS/CSS DEST
 
 var sassInput  = './sass/**/*.scss',
