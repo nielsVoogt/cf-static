@@ -1,0 +1,28 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Static components and layout for campfire webview",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nielsVoogt/cf-static.git"
+  },
+  "author": "Niels Voogt <n.voogt@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nielsVoogt/cf-static/issues"
+  },
+  "homepage": "https://github.com/nielsVoogt/cf-static#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-watch": "^5.0.0",
+    "merge-stream": "^1.0.1"
+  }
+}
