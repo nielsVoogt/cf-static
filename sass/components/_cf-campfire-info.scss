@@ -1,0 +1,30 @@
+
+// ------------------------------------------------------------- CAMPFIRE INFO
+
+.cf-campfire-info {
+    border-bottom: 1px solid $global--border-color;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &__image,
+    &__data {
+        padding: 1em;
+    }
+    
+    h2 {
+        font-size: 1rem;
+        font-weight: normal;
+        color: darken($type--base-text-color, 20%);
+        display: block;
+        margin-bottom: .3em;        
+    }
+
+    &:hover {
+        background: $cf-accent-color;
+    }
+
+    &:last-child {
+        border-bottom: 0;
+    }
+}

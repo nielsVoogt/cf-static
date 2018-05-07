@@ -1,0 +1,11 @@
+
+// ------------------------------------------------------------- CONTAINER
+
+.cf-container {
+    max-width: $layout--container-max-width;
+    margin: 0 auto;
+
+    @include breakpoint(map-get($breakpoints, mobile)) {
+        padding: 1em;
+    }
+}

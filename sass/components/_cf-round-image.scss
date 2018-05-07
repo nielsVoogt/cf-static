@@ -1,0 +1,19 @@
+
+// ------------------------------------------------------------- ROUND IMAGE
+
+.cf-round-image {
+    width: $cf-round-image-size;
+    height: $cf-round-image-size;
+    border-radius: $cf-round-image-size;
+
+    &.--large {
+        width: $cf-round-image-size--large;
+        height: $cf-round-image-size--large;
+        border-radius: $cf-round-image-size--large;
+    }
+
+    &.--shadow {
+        box-shadow: 0 0 10px #0000006e;
+        border: 1px solid white;
+    }
+}

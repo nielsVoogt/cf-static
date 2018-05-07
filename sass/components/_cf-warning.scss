@@ -1,0 +1,14 @@
+
+// ------------------------------------------------------------- WARNING
+
+.cf-warning {
+    padding: .5em 1em;
+    text-align: center;
+    background: $cf-warning-background-color;
+    border-bottom: 1px solid darken($cf-warning-background-color, 20%);
+
+    p {
+        font-size: .85rem;
+        line-height: 1.5;
+    }
+}

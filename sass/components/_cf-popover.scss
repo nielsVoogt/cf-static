@@ -1,0 +1,51 @@
+
+// ------------------------------------------------------------- POPOVER
+
+.cf-popover {
+    position: fixed;
+    left: 0;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba($black, .6);
+    display: flex;
+    display: none;
+    align-items: center;
+
+    &__content {
+        width: 80%;
+        max-width: 300px;
+        border-radius: ($global--border-radius * 3);
+        z-index: 2;
+        text-align: center;
+        background: $white;
+        padding: 1em;
+        position: relative;
+        margin: 0 auto;
+
+        .cf-round-image {
+            margin: 2em 0 1em;
+            display: inline-block;
+        }
+
+        h2 {
+            margin-bottom: .5em;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: 1em;
+        top: 1em;
+    }
+
+    a {
+        margin: 1.5em auto 1em;
+        display: block;
+    }
+
+    small {
+        opacity: .75;
+    }
+}

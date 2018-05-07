@@ -1,0 +1,18 @@
+
+// ------------------------------------------------------------- BACK
+
+.cf-back {
+    background: $global--base-background-color;
+    display: flex;
+    align-items: center;
+    padding: .75em;
+
+    svg {
+        stroke: $white;
+    }
+
+    p {
+        color: $white;
+        margin-left: .25em;
+    }
+}
