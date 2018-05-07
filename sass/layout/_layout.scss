@@ -1,10 +1,219 @@
 
+// ------------------------------------------------------------- CONTAINER
+
 .cf-container {
-    width: $layout--container-max-width;
-    margin: 0 auto; 
+    max-width: $layout--container-max-width;
+    margin: 0 auto;
+
+    @include breakpoint(map-get($breakpoints, mobile)) {
+        padding: 1em;
+    }
 }
 
+// ------------------------------------------------------------- VIEW
+
 .cf-view {
-    border-radius: $global--border-radius;
     background: $white;
+
+    @include breakpoint(map-get($breakpoints, mobile)) {
+        border-radius: ($global--border-radius * 3);
+    }
+}
+
+// ------------------------------------------------------------- BACK
+
+.cf-back {
+    background: $global--base-background-color;
+    display: flex;
+    align-items: center;
+    padding: .75em;
+
+    svg {
+        stroke: $white;
+    }
+
+    p {
+        color: $white;
+        margin-left: .25em;
+    }
+}
+
+// ------------------------------------------------------------- DATA ROW
+
+.cf-campfire-data-row {
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: .9em;
+        height: .9em;
+        display: block;
+        opacity: .5;
+    }
+
+    &__icon {
+        width: 1.5em;
+
+
+    }
+
+    p {
+        font-size: .9rem;
+    }
+}
+
+// ------------------------------------------------------------- CTA BAR
+
+.cf-cta-bar {
+    background: $white;
+    border-top: 1px solid $global--border-color;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    display: flex;
+    padding: .6em .5em;
+    
+    p {
+        margin: 0;
+    }
+
+    &__content {
+        width: 100%;
+        text-align: center;
+    }
+
+    &__icon {
+        margin-left: auto;
+        
+        svg {
+            display: block;
+            opacity: .5;
+        }
+    }
+}
+
+$cf-accent-color: #f6f6f6;
+
+// ------------------------------------------------------------- CAMPFIRE INFO
+
+.cf-campfire-info {
+    border-bottom: 1px solid $global--border-color;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &__image,
+    &__data {
+        padding: 1em;
+    }
+    
+    h2 {
+        font-size: 1rem;
+        font-weight: normal;
+        color: darken($type--base-text-color, 20%);
+        display: block;
+        margin-bottom: .3em;        
+    }
+
+    &:hover {
+        background: $cf-accent-color;
+    }
+
+    &:last-child {
+        border-bottom: 0;
+    }
+}
+
+// ------------------------------------------------------------- DIVIDER
+
+.cf-list-divider {
+    background: $cf-accent-color;
+    padding: .4em;
+    text-align: center;
+    border-top: 1px solid $global--border-color;
+    border-bottom: 1px solid $global--border-color;
+}
+
+// ------------------------------------------------------------- WARNING
+
+$cf-warning-background-color: #fbf38d;
+
+.cf-warning {
+    padding: .5em 1em;
+    text-align: center;
+    background: $cf-warning-background-color;
+    border-bottom: 1px solid darken($cf-warning-background-color, 20%);
+
+    p {
+        font-size: .85rem;
+        line-height: 1.5;
+    }
+}
+
+// ------------------------------------------------------------- ROUND IMAGE
+
+.cf-round-image {
+    width: $cf-round-image-size;
+    height: $cf-round-image-size;
+    border-radius: $cf-round-image-size;
+    box-shadow: 0 0 10px #0000006e;
+    border: 1px solid white;
+
+    &.--large {
+        width: $cf-round-image-size--large;
+        height: $cf-round-image-size--large;
+        border-radius: $cf-round-image-size--large;
+    }
+}
+
+// ------------------------------------------------------------- POPOVER
+
+.cf-popover {
+    position: fixed;
+    left: 0;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba($black, .6);
+    display: flex;
+    display: none;
+    align-items: center;
+
+    &__content {
+        width: 80%;
+        max-width: 300px;
+        border-radius: ($global--border-radius * 3);
+        z-index: 2;
+        text-align: center;
+        background: $white;
+        padding: 1em;
+        position: relative;
+        margin: 0 auto;
+
+        .cf-round-image {
+            margin: 2em 0 1em;
+            display: inline-block;
+        }
+
+        h2 {
+            margin-bottom: .5em;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: 1em;
+        top: 1em;
+    }
+
+    a {
+        margin: 1.5em auto 1em;
+        display: block;
+    }
+
+    small {
+        opacity: .75;
+    }
 }
