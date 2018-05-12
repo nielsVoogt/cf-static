@@ -9,9 +9,18 @@
     position: fixed;
     right: 0;
     display: flex;
+    cursor: pointer;
     padding: .6em .5em;
+
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 1.25em;
+        margin-right: .5em;
+    }
     
     p {
+        display: inline-block;
         margin: 0;
     }
 
@@ -27,5 +36,9 @@
             display: block;
             opacity: .5;
         }
+    }
+
+    &:hover {
+        background: $cf-accent-color;
     }
 }

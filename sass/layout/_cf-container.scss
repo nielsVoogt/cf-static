@@ -6,6 +6,6 @@
     margin: 0 auto;
 
     @include breakpoint(map-get($breakpoints, mobile)) {
-        padding: 1em;
+        padding: 0 1em 1em;
     }
 }

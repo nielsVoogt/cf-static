@@ -180,6 +180,60 @@ html {
   height: 100%;
 }
 
+.cf-navigation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+}
+
+.cf-navigation > * {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cf-navigation__options {
+  margin-left: auto;
+}
+
+.cf-navigation__option {
+  opacity: .5;
+}
+
+.cf-navigation__option svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.cf-navigation__option a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: .5em;
+  padding: .5em;
+}
+
+.cf-navigation__option:hover {
+  opacity: 1;
+}
+
+.cf-navigation__option.--active {
+  opacity: 1;
+  pointer-events: none;
+}
+
 .cf-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -187,7 +241,7 @@ html {
 
 @media (min-width: 769px) {
   .cf-container {
-    padding: 1em;
+    padding: 0 1em 1em;
   }
 }
 
@@ -220,28 +274,6 @@ html {
     border-radius: 12px;
     min-height: 80vh;
   }
-}
-
-.cf-back {
-  background: linear-gradient(45deg, #ffc667, #ffa001);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: .75em;
-}
-
-.cf-back svg {
-  stroke: #ffffff;
-}
-
-.cf-back p {
-  color: #ffffff;
-  margin-left: .25em;
 }
 
 .cf-campfire-info {
@@ -277,36 +309,30 @@ html {
   border-bottom: 0;
 }
 
-.cf-cta-bar {
-  background: #ffffff;
-  border-top: 1px solid #d8d8d8;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: .6em .5em;
-}
-
-.cf-cta-bar p {
-  margin: 0;
-}
-
-.cf-cta-bar__content {
-  width: 100%;
+.cf-list-divider {
+  background: #f6f6f6;
+  padding: .4em;
   text-align: center;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
 }
 
-.cf-cta-bar__icon {
-  margin-left: auto;
+.cf-round-image {
+  width: 3em;
+  height: 3em;
+  border-radius: 3em;
 }
 
-.cf-cta-bar__icon svg {
-  display: block;
-  opacity: .5;
+.cf-round-image.--large {
+  width: 11em;
+  height: 11em;
+  border-radius: 11em;
+}
+
+.cf-round-image.--shadow {
+  -webkit-box-shadow: 0 0 10px #0000006e;
+          box-shadow: 0 0 10px #0000006e;
+  border: 1px solid white;
 }
 
 .cf-campfire-data-row {
@@ -333,14 +359,6 @@ html {
 
 .cf-campfire-data-row p {
   font-size: .9rem;
-}
-
-.cf-list-divider {
-  background: #f6f6f6;
-  padding: .4em;
-  text-align: center;
-  border-top: 1px solid #d8d8d8;
-  border-bottom: 1px solid #d8d8d8;
 }
 
 .cf-popover {
@@ -398,22 +416,49 @@ html {
   opacity: .75;
 }
 
-.cf-round-image {
-  width: 3em;
-  height: 3em;
-  border-radius: 3em;
+.cf-cta-bar {
+  background: #ffffff;
+  border-top: 1px solid #d8d8d8;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  padding: .6em .5em;
 }
 
-.cf-round-image.--large {
-  width: 10em;
-  height: 10em;
-  border-radius: 10em;
+.cf-cta-bar img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 1.25em;
+  margin-right: .5em;
 }
 
-.cf-round-image.--shadow {
-  -webkit-box-shadow: 0 0 10px #0000006e;
-          box-shadow: 0 0 10px #0000006e;
-  border: 1px solid white;
+.cf-cta-bar p {
+  display: inline-block;
+  margin: 0;
+}
+
+.cf-cta-bar__content {
+  width: 100%;
+  text-align: center;
+}
+
+.cf-cta-bar__icon {
+  margin-left: auto;
+}
+
+.cf-cta-bar__icon svg {
+  display: block;
+  opacity: .5;
+}
+
+.cf-cta-bar:hover {
+  background: #f6f6f6;
 }
 
 .cf-warning {
@@ -426,4 +471,26 @@ html {
 .cf-warning p {
   font-size: .85rem;
   line-height: 1.5;
+}
+
+.cf-back {
+  background: linear-gradient(45deg, #ffc667, #ffa001);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .75em;
+}
+
+.cf-back svg {
+  stroke: #ffffff;
+}
+
+.cf-back p {
+  color: #ffffff;
+  margin-left: .25em;
 }
