@@ -1,0 +1,41 @@
+
+// ------------------------------------------------------------- NAVIGATION
+
+.cf-navigation {
+    display: flex;
+    padding: 1em;
+
+    > * {
+        display: flex;
+        align-items: center;
+    }
+
+    &__options {
+        margin-left: auto;
+    }
+    
+    &__option {
+        opacity: .5;
+
+        svg {
+            width: 1.5em;
+            height: 1.5em;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            margin-left: .5em;
+            padding: .5em;
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &.--active {
+            opacity: 1;
+            pointer-events: none;
+        }
+    }
+}
