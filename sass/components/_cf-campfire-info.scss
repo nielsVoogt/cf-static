@@ -7,6 +7,8 @@
     align-items: center;
     cursor: pointer;
 
+    $this: &;
+
     &__image,
     &__data {
         padding: 1em;
@@ -17,7 +19,8 @@
         font-weight: normal;
         color: darken($type--base-text-color, 20%);
         display: block;
-        margin-bottom: .3em;        
+        margin-bottom: .3em;
+        font-weight: bold;        
     }
 
     &:hover {
@@ -26,5 +29,39 @@
 
     &:last-child {
         border-bottom: 0;
+    }
+
+    // ------------------------------------------------------------- DETAIL
+
+    &--detail {
+        flex-direction: column;
+        height: 100%;
+        cursor: default;
+        width: 100%;
+        align-items: flex-start;
+        position: relative;
+
+        #{$this}__data {
+            padding: 1em;
+        }
+
+        #{$this}__image {
+            padding: 0;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h2 + p {
+            margin-bottom: 1em;
+        }
+
+        .cf-button {
+            margin-top: auto;
+        }
+
+        &:hover {
+            background: none;
+        }
     }
 }

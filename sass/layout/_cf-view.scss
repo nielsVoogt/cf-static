@@ -5,25 +5,8 @@
     background: $white;
     position: relative;
     overflow: hidden;
-    min-height: 100vh;
-
-    $cf-iframe-margin: 3px;
-
-    iframe {
-        height: 100%;
-        position: absolute;
-
-        @include breakpoint(map-get($breakpoints, mobile)) {
-            $tmp: ($cf-iframe-margin * 2);
-            border-radius: ($global--border-radius * 3);
-            height: calc(100% - #{$tmp});
-            margin-left: $cf-iframe-margin;
-            margin-top: $cf-iframe-margin;
-            overflow: hidden;
-            position: absolute;
-            width: calc(100% - #{$tmp});
-        }
-    }
+    min-height: 100%;
+    // min-height: 100vh;
 
     @include breakpoint(map-get($breakpoints, mobile)) {
         border-radius: ($global--border-radius * 3);

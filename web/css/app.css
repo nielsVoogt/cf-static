@@ -249,24 +249,7 @@ html {
   background: #ffffff;
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
-}
-
-.cf-view iframe {
-  height: 100%;
-  position: absolute;
-}
-
-@media (min-width: 769px) {
-  .cf-view iframe {
-    border-radius: 12px;
-    height: calc(100% - 6px);
-    margin-left: 3px;
-    margin-top: 3px;
-    overflow: hidden;
-    position: absolute;
-    width: calc(100% - 6px);
-  }
+  min-height: 100%;
 }
 
 @media (min-width: 769px) {
@@ -299,6 +282,7 @@ html {
   color: #3c3c3c;
   display: block;
   margin-bottom: .3em;
+  font-weight: bold;
 }
 
 .cf-campfire-info:hover {
@@ -309,12 +293,95 @@ html {
   border-bottom: 0;
 }
 
+.cf-campfire-info--detail {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  cursor: default;
+  width: 100%;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+}
+
+.cf-campfire-info--detail .cf-campfire-info__data {
+  padding: 1em;
+}
+
+.cf-campfire-info--detail .cf-campfire-info__image {
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.cf-campfire-info--detail h2 + p {
+  margin-bottom: 1em;
+}
+
+.cf-campfire-info--detail .cf-button {
+  margin-top: auto;
+}
+
+.cf-campfire-info--detail:hover {
+  background: none;
+}
+
 .cf-list-divider {
   background: #f6f6f6;
   padding: .4em;
   text-align: center;
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
+}
+
+.cf-button-round {
+  background: #ffffff;
+  border-radius: 3em;
+  height: 3em;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 3em;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cf-button-round svg {
+  stroke: rgba(0, 0, 0, 0.25);
+}
+
+.cf-button-round--left {
+  left: 1em;
+}
+
+.cf-button-round--left svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.cf-button-round--right {
+  right: 1em;
 }
 
 .cf-round-image {
@@ -473,6 +540,51 @@ html {
   line-height: 1.5;
 }
 
+.cf-button {
+  background: #ffa001;
+  color: #ffffff;
+  width: 100%;
+  border-radius: 3px;
+  display: block;
+  text-align: center;
+  padding: .75em;
+  font-weight: bold;
+}
+
+.cf-detail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: calc(100vh - 63px);
+}
+
+.cf-detail__map {
+  height: auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.cf-detail__map .cf-map {
+  width: 100%;
+}
+
+.cf-detail__details {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  padding: 1em;
+}
+
 .cf-back {
   background: linear-gradient(45deg, #ffc667, #ffa001);
   display: -webkit-box;
@@ -493,4 +605,21 @@ html {
 .cf-back p {
   color: #ffffff;
   margin-left: .25em;
+}
+
+.cf-map {
+  height: 100%;
+  position: absolute;
+}
+
+@media (min-width: 769px) {
+  .cf-map {
+    border-radius: 12px;
+    height: calc(100% - 6px);
+    margin-left: 3px;
+    margin-top: 3px;
+    overflow: hidden;
+    position: absolute;
+    width: calc(100% - 6px);
+  }
 }

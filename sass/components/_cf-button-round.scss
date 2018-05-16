@@ -1,0 +1,35 @@
+
+// ------------------------------------------------------------- BUTTON ROUND
+
+$cf-button-round-size: 3em;
+
+.cf-button-round {
+    background: $white;
+    border-radius: $cf-button-round-size;
+    height: $cf-button-round-size;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: $cf-button-round-size;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba($black, .2);
+
+    svg {
+        stroke: rgba($black, .25);
+    }
+
+    &--left {
+        left: 1em;
+        
+        svg { transform: rotate(180deg); }
+    }
+
+    &--right {
+        right: 1em;
+    }
+}
+
+

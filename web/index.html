@@ -56,13 +56,12 @@
                 </li>
             </ul>
         </nav>
+
         <div class="cf-view" style="display: none;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.5422688997473!2d4.648289951509439!3d52.396847653001636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5ef7866631ee1%3A0xc05fc3549af7c664!2sJurriaan+van+Drunen!5e0!3m2!1sen!2snl!4v1525714756803" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe class="cf-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.5422688997473!2d4.648289951509439!3d52.396847653001636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5ef7866631ee1%3A0xc05fc3549af7c664!2sJurriaan+van+Drunen!5e0!3m2!1sen!2snl!4v1525714756803" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
-        <div class="cf-view" >
-            <a href="#" class="cf-button">
-                Navigate
-            </a>
+
+        <div class="cf-view" style="display: none;">
         
             <div class="cf-popover">    
                 <div class="cf-popover__content">
@@ -141,6 +140,56 @@
                 <p>More than 5km away from you</p>
             </div>
 
+        </div>
+
+        <div class="cf-view">
+
+            <div class="cf-detail">
+                <div class="cf-detail__map">
+                    <a class="cf-button-round cf-button-round--left">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </a>
+                    <a class="cf-button-round cf-button-round--right">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </a>
+                    <iframe class="cf-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.5422688997473!2d4.648289951509439!3d52.396847653001636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5ef7866631ee1%3A0xc05fc3549af7c664!2sJurriaan+van+Drunen!5e0!3m2!1sen!2snl!4v1525714756803" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                
+                <div class="cf-detail__details">
+                    <div class="cf-campfire-info cf-campfire-info--detail">
+                        <div class="cf-campfire-info__image">
+                            <div
+                                class="cf-round-image --shadow" 
+                                style="background: url('https://www.hpdetijd.nl/wp-content/uploads/2017/03/Rutte-lach-1400x450.jpg') no-repeat center center/cover #ccc"
+                            ></div>
+                        </div>
+                        <div class="cf-campfire-info__data">
+                            <h2>Sunday park session</h2>
+                            <p>Join in, bring some friends and let's have a good time! Don't forget to bring your own drinks and food.</p>
+                
+                            <div class="cf-campfire-data-row">
+                                <div class="cf-campfire-data-row__icon">
+                                    <img src="assets/icon-location.svg" />
+                                </div>
+                                <div class="cf-campfire-data-row__content">
+                                    <p>2 km from here</p>
+                                </div>
+                            </div>
+                            <div class="cf-campfire-data-row">
+                                <div class="cf-campfire-data-row__icon">
+                                    <img src="assets/icon-clock.svg" />
+                                </div>
+                                <div class="cf-campfire-data-row__content">
+                                    <p>Starts at xx:xx</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="cf-button">
+                            Navigate
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

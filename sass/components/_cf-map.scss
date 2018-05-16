@@ -1,0 +1,20 @@
+
+// ------------------------------------------------------------- MAP
+
+$cf-iframe-margin: 3px;
+
+.cf-map {
+    height: 100%;
+    position: absolute;
+
+    @include breakpoint(map-get($breakpoints, mobile)) {
+        $tmp: ($cf-iframe-margin * 2);
+        border-radius: ($global--border-radius * 3);
+        height: calc(100% - #{$tmp});
+        margin-left: $cf-iframe-margin;
+        margin-top: $cf-iframe-margin;
+        overflow: hidden;
+        position: absolute;
+        width: calc(100% - #{$tmp});
+    }
+}

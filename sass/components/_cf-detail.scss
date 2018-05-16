@@ -1,0 +1,21 @@
+
+.cf-detail {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 63px);
+
+    &__map {
+        height: auto;
+        flex: 1;
+        position: relative;
+
+        .cf-map {
+            width: 100%;
+        }
+    }    
+
+    &__details {
+        flex: 0 0 auto;
+        padding: 1em;
+    }
+}
