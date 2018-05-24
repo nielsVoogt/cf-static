@@ -231,7 +231,6 @@ html {
 
 .cf-navigation__option.--active {
   opacity: 1;
-  pointer-events: none;
 }
 
 .cf-container {
