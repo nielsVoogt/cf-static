@@ -16,7 +16,7 @@
     &--full-map {
         @include breakpoint(max-width map-get($breakpoints, mobile)) {
             .cf-map {
-                height: calc(100% - 65px);
+                height: calc(100% - #{$cf-navigation-height});
             }
         }
     }
