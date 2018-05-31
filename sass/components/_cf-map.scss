@@ -6,6 +6,7 @@ $cf-iframe-margin: 3px;
 .cf-map {
     height: 100%;
     position: absolute;
+    width: 100%;
 
     @include breakpoint(map-get($breakpoints, mobile)) {
         $tmp: ($cf-iframe-margin * 2);

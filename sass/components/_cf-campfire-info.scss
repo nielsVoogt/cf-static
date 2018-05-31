@@ -43,13 +43,14 @@
 
         #{$this}__data {
             padding: 1em;
+            width: 100%;
         }
 
         #{$this}__image {
             padding: 0;
             position: absolute;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, calc(-50% - 1em));
         }
 
         h2 + p {

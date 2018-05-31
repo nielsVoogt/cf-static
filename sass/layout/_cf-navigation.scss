@@ -4,6 +4,7 @@
 .cf-navigation {
     display: flex;
     padding: 1em;
+    height: $cf-navigation-height;
 
     > * {
         display: flex;

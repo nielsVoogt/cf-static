@@ -186,6 +186,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   padding: 1em;
+  height: 65px;
 }
 
 .cf-navigation > * {
@@ -246,15 +247,22 @@ html {
 
 .cf-view {
   background: #ffffff;
-  position: relative;
   overflow: hidden;
   min-height: 100%;
+  max-height: calc(100vh - 65px);
 }
 
 @media (min-width: 769px) {
   .cf-view {
     border-radius: 12px;
     min-height: 80vh;
+    position: relative;
+  }
+}
+
+@media (max-width: 769px) {
+  .cf-view--full-map .cf-map {
+    height: calc(100% - 65px);
   }
 }
 
@@ -310,14 +318,15 @@ html {
 
 .cf-campfire-info--detail .cf-campfire-info__data {
   padding: 1em;
+  width: 100%;
 }
 
 .cf-campfire-info--detail .cf-campfire-info__image {
   padding: 0;
   position: absolute;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, calc(-50% - 1em));
+          transform: translate(-50%, calc(-50% - 1em));
 }
 
 .cf-campfire-info--detail h2 + p {
@@ -563,6 +572,17 @@ html {
   height: calc(100vh - 63px);
 }
 
+@media (min-width: 769px) {
+  .cf-detail {
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
 .cf-detail__map {
   height: auto;
   -webkit-box-flex: 1;
@@ -570,10 +590,6 @@ html {
       -ms-flex: 1;
           flex: 1;
   position: relative;
-}
-
-.cf-detail__map .cf-map {
-  width: 100%;
 }
 
 .cf-detail__details {
@@ -585,7 +601,7 @@ html {
 }
 
 .cf-back {
-  background: linear-gradient(45deg, #ffc667, #ffa001);
+  background: #ffa001;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -609,6 +625,7 @@ html {
 .cf-map {
   height: 100%;
   position: absolute;
+  width: 100%;
 }
 
 @media (min-width: 769px) {
