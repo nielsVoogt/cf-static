@@ -6,6 +6,11 @@
     display: flex;
     align-items: center;
     padding: .75em;
+    height: $cf-navigation-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 
     svg {
         stroke: $white;
@@ -14,5 +19,6 @@
     p {
         color: $white;
         margin-left: .25em;
+        font-size: 1.125rem;
     }
 }

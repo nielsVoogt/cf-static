@@ -1,15 +1,21 @@
 
 // ------------------------------------------------------------- ROUND IMAGE
 
+@mixin cf-rounded($size) {
+    width: $size;
+    height: $size;
+    border-radius: $size;
+}
+
 .cf-round-image {
-    width: $cf-round-image-size;
-    height: $cf-round-image-size;
-    border-radius: $cf-round-image-size;
+    @include cf-rounded($cf-round-image-size);
 
     &.--large {
-        width: $cf-round-image-size--large;
-        height: $cf-round-image-size--large;
-        border-radius: $cf-round-image-size--large;
+        @include cf-rounded($cf-round-image-size--large);
+    }
+
+    &.--medium {
+        @include cf-rounded($cf-round-image-size--medium);
     }
 
     &.--shadow {

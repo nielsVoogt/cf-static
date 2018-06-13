@@ -171,7 +171,7 @@ html {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.6;
-  background: linear-gradient(45deg, #ffc667, #ffa001);
+  background: #ffa001;
 }
 
 body,
@@ -255,7 +255,7 @@ html {
 @media (min-width: 769px) {
   .cf-view {
     border-radius: 12px;
-    min-height: 80vh;
+    height: 80vh;
     position: relative;
   }
 }
@@ -264,6 +264,10 @@ html {
   .cf-view--full-map .cf-map {
     height: calc(100% - 65px);
   }
+}
+
+.cf-view--list {
+  overflow-y: scroll;
 }
 
 .cf-campfire-info {
@@ -286,10 +290,9 @@ html {
 .cf-campfire-info h2 {
   font-size: 1rem;
   font-weight: normal;
-  color: #3c3c3c;
+  color: #000000;
   display: block;
   margin-bottom: .3em;
-  font-weight: bold;
 }
 
 .cf-campfire-info:hover {
@@ -300,7 +303,7 @@ html {
   border-bottom: 0;
 }
 
-.cf-campfire-info--detail {
+.cf-campfire-info--detail, .cf-campfire-info--business {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -316,29 +319,38 @@ html {
   position: relative;
 }
 
-.cf-campfire-info--detail .cf-campfire-info__data {
+.cf-campfire-info--detail .cf-campfire-info__data, .cf-campfire-info--business .cf-campfire-info__data {
   padding: 1em;
   width: 100%;
 }
 
-.cf-campfire-info--detail .cf-campfire-info__image {
-  padding: 0;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate(-50%, calc(-50% - 1em));
-          transform: translate(-50%, calc(-50% - 1em));
+.cf-campfire-info--detail .cf-button, .cf-campfire-info--business .cf-button {
+  margin-top: auto;
+}
+
+.cf-campfire-info--detail:hover, .cf-campfire-info--business:hover {
+  background: none;
+}
+
+.cf-campfire-info--detail h2 {
+  font-weight: bold;
 }
 
 .cf-campfire-info--detail h2 + p {
   margin-bottom: 1em;
 }
 
-.cf-campfire-info--detail .cf-button {
-  margin-top: auto;
+.cf-campfire-info--business {
+  text-align: center;
+  padding-top: 2.5em;
 }
 
-.cf-campfire-info--detail:hover {
-  background: none;
+.cf-campfire-info--business .cf-campfire-info__image {
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(-50% - 3.5em));
+          transform: translate(-50%, calc(-50% - 3.5em));
 }
 
 .cf-list-divider {
@@ -402,6 +414,12 @@ html {
   width: 11em;
   height: 11em;
   border-radius: 11em;
+}
+
+.cf-round-image.--medium {
+  width: 6em;
+  height: 6em;
+  border-radius: 6em;
 }
 
 .cf-round-image.--shadow {
@@ -611,6 +629,11 @@ html {
       -ms-flex-align: center;
           align-items: center;
   padding: .75em;
+  height: 65px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .cf-back svg {
@@ -620,6 +643,7 @@ html {
 .cf-back p {
   color: #ffffff;
   margin-left: .25em;
+  font-size: 1.125rem;
 }
 
 .cf-map {

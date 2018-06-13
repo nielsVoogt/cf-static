@@ -17,10 +17,10 @@
     h2 {
         font-size: 1rem;
         font-weight: normal;
-        color: darken($type--base-text-color, 20%);
+        color: $black;
         display: block;
         margin-bottom: .3em;
-        font-weight: bold;        
+        // font-weight: bold;        
     }
 
     &:hover {
@@ -31,9 +31,10 @@
         border-bottom: 0;
     }
 
-    // ------------------------------------------------------------- DETAIL
+    // ------------------------------------------------------------- DETAIL/BUSINESS
 
-    &--detail {
+    &--detail,
+    &--business {
         flex-direction: column;
         height: 100%;
         cursor: default;
@@ -46,23 +47,38 @@
             width: 100%;
         }
 
-        #{$this}__image {
-            padding: 0;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%, calc(-50% - 1em));
-        }
-
-        h2 + p {
-            margin-bottom: 1em;
-        }
-
         .cf-button {
             margin-top: auto;
         }
 
         &:hover {
             background: none;
+        }
+    }
+
+    // ------------------------------------------------------------- DETAIL
+
+    &--detail {
+        h2 {
+            font-weight: bold; 
+
+            + p {
+                margin-bottom: 1em;
+            }
+        }
+    }
+
+    // ------------------------------------------------------------- BUSINESS
+
+    &--business {
+        text-align: center;
+        padding-top: 2.5em;
+
+        #{$this}__image {
+            padding: 0;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, calc(-50% - 3.5em)); // cf-details__detail padding + cf-detail--business padding-top
         }
     }
 }

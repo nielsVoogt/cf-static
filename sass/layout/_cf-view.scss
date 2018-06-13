@@ -9,7 +9,7 @@
 
     @include breakpoint(map-get($breakpoints, mobile)) {
         border-radius: ($global--border-radius * 3);
-        min-height: 80vh;
+        height: 80vh;
         position: relative;
     }
 
@@ -19,5 +19,9 @@
                 height: calc(100% - #{$cf-navigation-height});
             }
         }
+    }
+
+    &--list {
+        overflow-y: scroll;
     }
 }

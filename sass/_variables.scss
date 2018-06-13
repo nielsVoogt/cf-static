@@ -7,7 +7,7 @@ $cf-color: #ffa001;
 /// ----------------------------------------------------------------------------------------------- GLOBALS
 
 $global--border-radius: 4px;
-$global--base-background-color: linear-gradient(45deg, lighten($cf-color, 20%), $cf-color);
+$global--base-background-color: $cf-color;
 $global--border-color: #d8d8d8;
 
 /// ----------------------------------------------------------------------------------------------- BUTTON
@@ -46,6 +46,7 @@ $breakpoints: (
 );
 
 $cf-round-image-size: 3em;
+$cf-round-image-size--medium: 6em;
 $cf-round-image-size--large: 11em;
 $cf-accent-color: #f6f6f6;
 $cf-warning-background-color: #fbf38d;
