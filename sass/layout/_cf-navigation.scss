@@ -4,30 +4,63 @@
 .cf-navigation {
     display: flex;
     padding: 1em;
-    height: $cf-navigation-height;
+    height: $cf-navigation-height-mobile;
+    position: relative;
+    
+    @include breakpoint(map-get($breakpoints, mobile)) {
+        height: $cf-navigation-height;
+    }
 
-    > * {
+    &__left,
+    &__right {
         display: flex;
         align-items: center;
     }
 
-    &__options {
+    &__right {
         margin-left: auto;
     }
+}
+
+// ------------------------------------------------------------- NAVIGATION LOGO
+
+.cf-navigation-logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include breakpoint(map-get($breakpoints, mobile)) {
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        svg {
+            height: 40px;
+            width: auto;
+        }
+    }
+}
+
+// ------------------------------------------------------------- NAVIGATION OPTIONS
+
+.cf-navigation-options {
+    display: flex;
+    align-items: center;
     
     &__option {
         opacity: .5;
-
-        svg {
-            width: 1.5em;
-            height: 1.5em;
-        }
-
+        
         a {
             display: flex;
             align-items: center;
-            margin-left: .5em;
+            margin-left: 1em;
             padding: .5em;
+            
+            svg {
+                @include breakpoint(map-get($breakpoints, mobile)) {
+                    width: 2em;
+                    height: 2em;
+                }
+            }
         }
 
         &:hover {

@@ -37,7 +37,7 @@ $type--paragraph-letter-spacing: normal;
 
 /// ----------------------------------------------------------------------------------------------- LAYOUT
 
-$layout--container-max-width: 1100px;
+$layout--container-max-width: 900px;
 
 /// ----------------------------------------------------------------------------------------------- MA BREAKPOINTS..
 
@@ -50,4 +50,6 @@ $cf-round-image-size--medium: 6em;
 $cf-round-image-size--large: 11em;
 $cf-accent-color: #f6f6f6;
 $cf-warning-background-color: #fbf38d;
-$cf-navigation-height: 65px;
+
+$cf-navigation-height: 85px;
+$cf-navigation-height-mobile: 65px;

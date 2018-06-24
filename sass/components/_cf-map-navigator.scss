@@ -1,0 +1,63 @@
+
+// ------------------------------------------------------------- VIEW
+
+.cf-map-navigator {
+    max-width: 400px;
+    width: 90%;
+    background: $white;
+    border-radius: ($global--border-radius * 2);
+    display: flex;
+    position: relative;
+    margin: 1em;
+    box-shadow: 0 0 20px rgba($black, .2);
+
+    $prev-next-width: 45px;
+
+    .cf-campfire-info {
+        &__data {
+            padding: 1em 0;
+        }
+    }
+
+    &__prev,
+    &__next {
+        width: $prev-next-width;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__next {
+        border-left: 1px solid $global--border-color;
+    }
+
+    &__prev {
+        border-right: 1px solid $global--border-color;
+        
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__content {
+        $tmp: $prev-next-width;
+        width: calc(100% - #{$tmp});
+        padding: 0 1em 1em 1em;
+    }
+
+    $arrow-size: 14px;
+
+    &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: $arrow-size solid transparent;
+        border-right: $arrow-size solid transparent;
+        border-bottom: ($arrow-size * 1.5) solid $white;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -$arrow-size;
+    }
+}
+

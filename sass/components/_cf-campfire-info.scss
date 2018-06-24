@@ -13,14 +13,27 @@
     &__data {
         padding: 1em;
     }
+
+    &__data {
+        &__divider {
+            width: 1em;
+            margin: .5em auto;
+            height: 2px;
+            background: rgba($black, .2);
+        } 
+    }
     
     h2 {
         font-size: 1rem;
         font-weight: normal;
-        color: $black;
+        color: rgba($black, .9);
         display: block;
         margin-bottom: .3em;
-        // font-weight: bold;        
+    }
+
+    small {
+        font-size: .9rem;
+        opacity: .8;
     }
 
     &:hover {
@@ -41,6 +54,10 @@
         width: 100%;
         align-items: flex-start;
         position: relative;
+
+        h2 {
+            font-weight: bold; 
+        }
 
         #{$this}__data {
             padding: 1em;
